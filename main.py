@@ -83,6 +83,7 @@ def steer():
     global click_y
     global click_x
     global abort
+    global eq
     for event in pygame.event.get():
         end_check(event)
         if event.type == MOUSEBUTTONDOWN:
@@ -141,6 +142,7 @@ def steer():
 def generate():
     steer()
     window.fill(bcg_col)
+
     for i in range(n):
         for j in range(n):
             if board[i][j] == 0:
